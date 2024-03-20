@@ -5,7 +5,9 @@ import Button from '@mui/material/Button';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import CloseIcon from '@mui/icons-material/Close';
 
-export default function products({products, showImage}) {
+import { useState } from 'react';
+
+export default function products({products, showImage, removeProduct}) {
 
     if(!products) {
         return null
@@ -42,7 +44,7 @@ export default function products({products, showImage}) {
                                 <div className={style.productSet}>
                                     <Button variant="outlined" className={style.btnAddToCart}>Add to cart</Button>
                                     <FavoriteIcon  className={style.favoriteSvg}/>
-                                    <CloseIcon/>
+                                    <CloseIcon onClick={() => removeProduct(elem.id)} className={style.close}/>
                                 </div>
                             </div>
                         </div>

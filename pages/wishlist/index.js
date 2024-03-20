@@ -36,10 +36,20 @@ export const getStaticProps = async () => {
 
 export default function Wishlist({products}) {
     const deleteSettings = ["All products", "Phones", "Accessories"]
-
     const [showImage, setImageShow] = useState(false)
 
-    const productsLength = products ? products.length : 0;
+
+    const [productList, setProductList] = useState(products);
+
+    const productsLength = productList ? productList.length : 0;
+
+
+    const removeProduct = (productId) => {
+        const updatedList = productList.filter(product => product.id !== productId);
+        setProductList(updatedList);
+    }
+
+
 
     return (
         <div className={style.container}>
@@ -82,7 +92,7 @@ export default function Wishlist({products}) {
                         </div>
                     </div>
                 </div>   
-                <Products products={products} showImage={showImage}/>
+                <Products showImage={showImage} products={productList} removeProduct={removeProduct}/>
             </div>
         </div>
   )
