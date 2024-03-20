@@ -1,0 +1,233 @@
+.container {
+    max-width: 1440px;
+    padding: 52px 20px;
+    background-color: #F6F7F9;
+    margin: 100px auto;
+}
+.wishlist {
+    display: flex;
+    flex-direction: column;
+}
+
+.infoBlock {
+    p {
+        color: var(--main-color);
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 10px 0;
+    }
+    span {
+        font-size: 0.75rem;
+        font-weight: 400;
+        color: var(--second-color);
+    }
+}
+.icons {
+    display: flex;
+    align-items: center;
+    & :first-child {
+        margin-right: 15px;
+    }
+
+    span {
+        margin-left: 8px;
+        color: var(--second-color);
+        font-size: 0.75rem;
+        font-weight: 400;
+    }
+}
+
+.settingsRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.settingsBlock {
+    display: flex;
+    align-items: center;
+}
+.settingsBtn {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 4px;
+    background-color: var(--bg-gray);
+    cursor: pointer;
+
+    & + .settingsBtn {
+        margin-left: 20px;
+    }
+
+    &:hover {
+        background-color: #B2BAC7;
+        & span,
+          svg {
+        color: var(--color-white);
+    }
+    }
+
+    span {
+        color: var(--main-color);
+        margin-right: 5px;
+        font-size: 0.75rem;
+        font-weight: 700;
+    }
+}
+.btnNewCategory {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 8px 62px ;
+    color: var(--color-blue);
+    border: 1px solid var(--color-blue);
+    border-radius: 4px;
+}
+
+.basketTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    padding: 8px 30px;  
+
+    &__name {
+        display: flex;
+        width: 233px;
+        justify-content: center;
+        color: var(--main-color);
+        font-size: 0.75rem;
+        font-weight: 400;
+        & span {
+            width: 100px;
+            text-align: center;
+        }        
+    }
+
+    &__info {
+        display: flex;
+        width: 480px;
+        justify-content: space-between;
+        align-items: center;   
+    }
+    
+}
+
+.basketQuantityInfo {
+    display: flex;
+    width: 230px;
+    justify-content: space-between;
+    color: var(--main-color);
+    font-size: 0.75rem;
+    font-weight: 400;
+
+    // & span:nth-child(2) {
+    //     margin: 0 55px;
+    // }
+}
+
+.basketSwitcher {
+    & span:first-child {
+        color: var(--color-blue);
+    }
+    & span:last-child {
+        line-height: 14px;
+        font-size: 0.75rem;
+        font-weight: 400;
+        margin-left: 5px;
+    }
+}
+.active {
+    display: none;
+}   
+
+
+
+@media (max-width: 1023px) {
+    .settingsRow {
+        justify-content: space-around;
+    }
+    .basketTitle {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 10px 8px;
+        justify-content: flex-end;
+        &__name {
+            display: none;
+        }
+        &__info {
+            width: 100px;
+            display: block;
+        }
+    }
+    .basketQuantityInfo {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .settingsRow {
+        flex-direction: column;
+    }
+    .settingsBlock {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .settingsBtn {
+        padding: 3px 8px;
+        margin: 10px;
+
+        & + .settingsBtn {
+            margin-left: 10px;
+        }
+    }
+    .btnNewCategory {
+        width: 50%;
+        margin-top: 20px;
+        padding: 8px 10px;
+    }
+}
+// @media (max-width: 750px) {
+//     .settingsBtn {
+//         padding: 3px 6px;
+//         & + .settingsBtn {
+//             margin-left: 10px;
+//         }
+//     }   
+//     .btnNewCategory {
+//         padding: 5px 20px;
+//     }
+
+// }
+
+// @media (max-width: 550px) {
+//     .basketTitle {
+//         &__name {
+//             width: 180px;
+//         }
+//     }
+//     .settingsBlock {
+//         flex-wrap: wrap;
+//         justify-content: center;
+//     }
+//     .settingsBtn {
+//         margin: 10px;
+//     }
+    
+//     .settingsRow {
+//         flex-direction: column;
+//     }
+//     .btnNewCategory {
+//         margin-top: 20px;
+//     }
+// }
+
+// @media (max-width: 420px) {
+//     .basketTitle {
+//         padding-right: 0;
+//         &__name {
+//             width: 127px;
+//             span:last-child {
+//                 display: none;
+//             }
+//         }
+//     }
+// }
