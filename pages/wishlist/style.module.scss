@@ -118,10 +118,6 @@
     color: var(--main-color);
     font-size: 0.75rem;
     font-weight: 400;
-
-    // & span:nth-child(2) {
-    //     margin: 0 55px;
-    // }
 }
 
 .basketSwitcher {
@@ -185,49 +181,3 @@
         padding: 8px 10px;
     }
 }
-// @media (max-width: 750px) {
-//     .settingsBtn {
-//         padding: 3px 6px;
-//         & + .settingsBtn {
-//             margin-left: 10px;
-//         }
-//     }   
-//     .btnNewCategory {
-//         padding: 5px 20px;
-//     }
-
-// }
-
-// @media (max-width: 550px) {
-//     .basketTitle {
-//         &__name {
-//             width: 180px;
-//         }
-//     }
-//     .settingsBlock {
-//         flex-wrap: wrap;
-//         justify-content: center;
-//     }
-//     .settingsBtn {
-//         margin: 10px;
-//     }
-    
-//     .settingsRow {
-//         flex-direction: column;
-//     }
-//     .btnNewCategory {
-//         margin-top: 20px;
-//     }
-// }
-
-// @media (max-width: 420px) {
-//     .basketTitle {
-//         padding-right: 0;
-//         &__name {
-//             width: 127px;
-//             span:last-child {
-//                 display: none;
-//             }
-//         }
-//     }
-// }

@@ -5,15 +5,13 @@ import Button from '@mui/material/Button';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import CloseIcon from '@mui/icons-material/Close';
 
-import { useState } from 'react';
-
-export default function products({products, showImage, removeProduct}) {
+export default function products({products, removeProduct, showImage}) {
 
     if(!products) {
         return null
     }
 
-
+   
     return (
         <div className={style.productsBasket}>
                     {products && products.map((elem)=> (

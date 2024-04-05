@@ -8,7 +8,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import Button from '@mui/material/Button';
 import Switch from '@mui/material/Switch';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export const getStaticProps = async () => {
     try {
@@ -42,7 +42,6 @@ export default function Wishlist({products}) {
     const [productList, setProductList] = useState(products);
 
     const productsLength = productList ? productList.length : 0;
-
 
     const removeProduct = (productId) => {
         const updatedList = productList.filter(product => product.id !== productId);
@@ -92,7 +91,7 @@ export default function Wishlist({products}) {
                         </div>
                     </div>
                 </div>   
-                <Products showImage={showImage} products={productList} removeProduct={removeProduct}/>
+                <Products showImage={showImage} products={productList} removeProduct={removeProduct} />
             </div>
         </div>
   )

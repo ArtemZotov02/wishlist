@@ -1,0 +1,107 @@
+.container {
+   
+}
+
+.block {
+    // border-radius: 50%;
+    //
+    // width: 30vw; // круг будет 
+    // height: 30vw; //  адаптивным 
+    //
+    // border-left: 100px solid red;
+    // border-top: 150px solid white;
+    // border-bottom: 150px solid white;
+
+    width: 100px;
+
+    // триугольник
+    border-left: 50px solid black;  
+    border-right: 50px solid black;
+    border-bottom: 100px solid red;
+
+    //паралелеграм
+    // transform: skew(20deg);
+    // background-color: red;
+
+    position: relative;
+    left: -30vw;
+    transition: 0.2s all ease;
+
+    &.active {
+        left: 0;
+    }
+
+}
+
+.list {    
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    &.active {
+        height: 140px;
+    }
+    & div + div {
+        margin-top: 20px;
+    }
+
+    &__item {
+        width: 800px;
+        height: 124px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border-radius: 20px;
+        background-color: rgba(80, 133, 109, 0.528);
+        padding: 20px;
+        transition: 0.2s all  ease;
+
+        & p {
+            width: calc(33.33% - 13.33px);
+            height: 42px;
+            padding: 10px;
+            border: 1px solid  rgb(9, 138, 95);
+            border-radius: 20px;
+            color: rgb(247, 247, 247);
+            
+            &:nth-child(2) {
+                margin: 0 20px;
+            }
+        }
+        
+        & div {
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+            user-select: none;
+            & span {
+                padding: 5px 10px;
+                border-radius: 10px;
+                background-color: rgb(9, 138, 95);
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+        &.active {
+            height: 200px;
+
+        }
+    }
+}
+
+.ulList {
+    display: block;
+    position: relative;
+    top: -100px;
+    opacity: 0;
+    margin-top: 20px;
+    border: 1px solid  black;
+
+    transition: 0.2s all  ease;
+    
+    &.active {
+        top: 0;
+        opacity: 1;
+    }
+}
